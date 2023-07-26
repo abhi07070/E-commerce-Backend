@@ -18,7 +18,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              Ecommerce <i class="bx bxl-shopify"></i>
+              Ecommerce <i className="bx bxl-shopify"></i>
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">

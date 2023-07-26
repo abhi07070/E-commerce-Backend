@@ -21,7 +21,7 @@ const Contact = () => {
             <i class="bx bx-phone"></i> : 012-3456789
           </p>
           <p className="mt-3">
-            <i class="bx bx-support"></i> : 1800-0000-0000 (toll free)
+            <i className="bx bx-support"></i> : 1800-0000-0000 (toll free)
           </p>
         </div>
       </div>
