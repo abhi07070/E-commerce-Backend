@@ -59,9 +59,9 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <li class="nav-item dropdown">
+                  <li className="nav-item dropdown">
                     <Link
-                      class="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"

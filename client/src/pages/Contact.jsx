@@ -15,10 +15,10 @@ const Contact = () => {
             available
           </p>
           <p className="mt-3">
-            <i class="bx bx-envelope"></i> : www.help@ecommerceapp.com
+            <i className="bx bx-envelope"></i> : www.help@ecommerceapp.com
           </p>
           <p className="mt-3">
-            <i class="bx bx-phone"></i> : 012-3456789
+            <i className="bx bx-phone"></i> : 012-3456789
           </p>
           <p className="mt-3">
             <i className="bx bx-support"></i> : 1800-0000-0000 (toll free)
