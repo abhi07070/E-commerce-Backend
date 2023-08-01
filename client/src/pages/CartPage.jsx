@@ -3,6 +3,7 @@ import Layout from "./../components/Layout/Layout";
 import { useCart } from "../Context/Cart";
 import { useAuth } from "../Context/Auth";
 import { useNavigate } from "react-router-dom";
+
 const CartPage = () => {
   const [cart, setCart] = useCart();
   const [auth, setAuth] = useAuth();
@@ -57,7 +58,7 @@ const CartPage = () => {
           <div className="col-md-8">
             <div className="row">
               {cart?.map((p) => (
-                <div className="row mb-2 p-3 card flex-row">
+                <div key={p._id} className="row mb-2 p-3 card flex-row">
                   <div className="col-md-4">
                     {" "}
                     <img
@@ -86,6 +87,38 @@ const CartPage = () => {
             <p>Total | Checkout | Payment</p>
             <hr />
             <h4>Total : {totalPrice()}</h4>
+            {auth?.user?.address ? (
+              <>
+                <div className="mb-3">
+                  <h4>Current Address</h4>
+                  <h5>{auth?.user?.address}</h5>
+                  <button
+                    className="btn btn-outline-warning"
+                    onClick={() => navigate("/dashboard/user/profile")}
+                  >
+                    Update Address
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="mb-3">
+                {auth?.token ? (
+                  <button
+                    className="btn btn-outline-warning"
+                    onClick={() => navigate("/dashboard/user/profile")}
+                  >
+                    Update Address
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-outline-warning"
+                    onClick={() => navigate("/login", { state: "/cart" })}
+                  >
+                    Please login to checkout
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
