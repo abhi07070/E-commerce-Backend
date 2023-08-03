@@ -12,9 +12,7 @@ const Orders = () => {
     try {
       const { data } = await axios.get("/api/v1/auth/orders");
       setOrders(data);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -22,7 +20,7 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-fluid p-3 m-3">
+      <div className="container-fluid p-5 m-3">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />

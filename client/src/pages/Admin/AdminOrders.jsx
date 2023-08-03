@@ -23,9 +23,7 @@ const AdminOrders = () => {
     try {
       const { data } = await axios.get("/api/v1/auth/all-orders");
       setOrders(data);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -38,13 +36,11 @@ const AdminOrders = () => {
         status: value,
       });
       getOrders();
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   return (
     <Layout title={"All Orders Data"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid m-5 p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />

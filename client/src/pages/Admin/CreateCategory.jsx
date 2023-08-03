@@ -30,7 +30,6 @@ const CreateCategory = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in creating category");
     }
   };
@@ -45,7 +44,6 @@ const CreateCategory = () => {
         setCategories(data?.category);
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in fetching categories");
     }
   };
@@ -72,7 +70,6 @@ const CreateCategory = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in updating category");
     }
   };
@@ -90,13 +87,12 @@ const CreateCategory = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in deleting category");
     }
   };
   return (
     <Layout title={"Dashboard - Create Category"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid m-5 p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />

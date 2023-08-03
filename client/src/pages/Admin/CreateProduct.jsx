@@ -40,7 +40,6 @@ const CreateProduct = () => {
         setCategories(data?.category);
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in fetching categories");
     }
   };
@@ -71,14 +70,13 @@ const CreateProduct = () => {
         navigate("/dashboard/admin/products");
       }
     } catch (error) {
-      console.log(error);
       toast.error("Error in creating a product");
     }
   };
 
   return (
     <Layout title={"Dashboard - Create Product"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid m-5 p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />

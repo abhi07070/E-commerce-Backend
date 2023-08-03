@@ -15,7 +15,6 @@ const Products = () => {
       const { data } = await axios.get(`/api/v1/product/get-product`);
       setProducts(data.products);
     } catch (error) {
-      console.log(error);
       toast.error("Error in getting products");
     }
   };
@@ -26,7 +25,7 @@ const Products = () => {
   }, []);
   return (
     <Layout title={"Products - Ecommerce"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid m-5 p-3">
         <div className="row">
           <div className="col-md-3">
             <AdminMenu />

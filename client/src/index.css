@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* font-family: 'Playfair Display', serif;
 font-family: 'Poppins', sans-serif; */
 

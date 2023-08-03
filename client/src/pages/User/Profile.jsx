@@ -45,13 +45,12 @@ const Profile = () => {
         toast.success("Profile updated successfully");
       }
     } catch (error) {
-      console.log(error);
       toast.error("Something went wrong");
     }
   };
   return (
     <Layout title={"Your Profile"}>
-      <div className="container-fluid p-3 m-3">
+      <div className="container-fluid p-5 m-3">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
